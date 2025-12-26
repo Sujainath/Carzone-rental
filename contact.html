@@ -84,33 +84,34 @@
     <div class="form-box">
   <h3>Send Your Inquiry</h3><br>
 
-  <div class="form-grid">
-    <input type="text" placeholder="Full Name">
-    <input type="email" placeholder="Email Address">
+  <form id="inquiryForm">
+    <div class="form-grid">
+      <input id="inq_name" type="text" placeholder="Full Name" required>
+      <input id="inq_email" type="email" placeholder="Email Address" required>
+      <input id="inq_phone" type="text" placeholder="Phone Number" required>
 
-    <input type="text" placeholder="Phone Number">
+      <select id="inq_category" required>
+        <option value="">Select Car Category</option>
+        <option>Premium</option>
+        <option>Maruti Suzuki</option>
+        <option>Tata</option>
+        <option>Mahindra</option>
+        <option>Toyota</option>
+        <option>Kia</option>
+        <option>Hyundai</option>
+        <option>Skoda</option>
+        <option>Renault</option>
+        <option>Honda</option>
+        <option>Volkswagen</option>
+      </select>
+    </div>
 
-    <!-- Dropdown Added -->
-    <select>
-      <option value="">Select Car Category</option>
-      <option>Premium </option>
-      <option>Maruti Suzuki </option>
-      <option>Tata </option>
-      <option>Mahindra </option>
-      <option>Toyota </option>
-      <option>Kia </option>
-      <option>Hyundai </option>
-      <option>Skoda </option>
-      <option>Renault</option>
-      <option>Honda </option>
-      <option>Volkswagen </option>
-    </select>
+    <textarea id="inq_message" placeholder="Tell us about your rental needs..." required></textarea>
 
-  </div>
-
-  <textarea placeholder="Tell us about your rental needs..."></textarea>
-
-  <button class="send-btn">Send Message 💬</button>
+    <button type="submit" class="send-btn">Send Message 💬</button>
+  </form>
+  
+  <div id="statusMsg" style="display:none; color: #00ff77; margin-top: 10px; text-align: center;"></div>
 </div>
 
 </section>
@@ -149,10 +150,11 @@
          </p>
   </div>
 
-  <div class="newsletter">
-    <h3>Newsletter</h3>
-    <input type="email" placeholder="Your Email Address">
-    <button class="subscribe-btn">Subscribe Now 🚀</button>
+<div class="newsletter">
+      <h3>Get Exclusive Car Deals</h3>
+  <p class="newsletter-text">
+    Join 5,000+ happy riders. No spam. Only offers 
+  </p>
   </div>
 
 </footer>
